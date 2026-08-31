@@ -23,5 +23,7 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('', sitioempresa.sitioempresa_index, name='home'),
     path('nosotros/', sitioempresa.sitioempresa_nosotros, name='nosotros'),
-    path('contacto/', sitioempresa.sitioempresa_contacto, name='contacto')
+    path('contacto/', sitioempresa.sitioempresa_contacto, name='contacto'),
+    path('servicios/', sitioempresa.sitioempresa_servicios, name='servicios'),
+    path('servicios/<int:id>', sitioempresa.sitioempresa_ViewService.as_view(), name='servicios-details')
 ]

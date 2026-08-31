@@ -18,3 +18,15 @@ def servicios():
         Servicio(4, "Ciberseguridad para Pymes", "Protege los datos de tu empresa y de tus clientes con buenas prácticas reales.","Evaluamos la seguridad de tus sistemas y aplicamos buenas prácticas de protección de datos, control de accesos y respuesta ante incidentes, adaptadas a la realidad de una pyme.",350000,"","SEC"),
 
         ]
+    return lista_servicios
+
+# Colaborado por Claude Code
+# Prompt: "I need help showing some services stored inside models.py and have urls.py
+# generate a url for each service inside the directory
+#Código generado por Claude empieza aquí:
+def get_servicio(id):
+    for servicio in servicios():
+        if servicio.id == id:
+            return servicio
+    return None
+# Aquí termina código generado por Claude

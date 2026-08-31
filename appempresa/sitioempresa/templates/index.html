@@ -13,34 +13,16 @@
 <section class="container py-5">
   <h2 class="mb-4">Lo que hacemos</h2>
   <div class="row g-4">
+        {% for item in servicios %}
       <div class="col-md-6 col-lg-3">
-        <div class="card tn-card p-3 position-relative">
-          <div class="tn-icon">WEB</div>
-          <h5 class="card-title">Desarrollo de Sitios Web</h5>
-          <p class="card-text text-muted">Sitios y aplicaciones web a medida, rápidos y responsivos para tu negocio.</p>
-        </div>
+          <div class="card tn-card p-3 position-relative">
+              <div class="tn-icon">{{ item.icon }}</div>
+              <h5 class="card-title">{{item.nombre}}</h5>
+              <p class="card-text text-muted">{{item.descripcion_corta}}</p>
+          </div>
       </div>
-      <div class="col-md-6 col-lg-3">
-        <div class="card tn-card p-3 position-relative">
-          <div class="tn-icon">APP</div>
-          <h5 class="card-title">Aplicaciones Móviles</h5>
-          <p class="card-text text-muted">Apps nativas e híbridas para Android e iOS, conectadas a tus sistemas.</p>
-        </div>
-      </div>
-      <div class="col-md-6 col-lg-3">
-        <div class="card tn-card p-3 position-relative">
-          <div class="tn-icon">CLOUD</div>
-          <h5 class="card-title">Consultoría en la Nube</h5>
-          <p class="card-text text-muted">Migración y optimización de infraestructura en la nube para tu empresa.</p>
-        </div>
-      </div>
-      <div class="col-md-6 col-lg-3">
-        <div class="card tn-card p-3 position-relative">
-          <div class="tn-icon">SEC</div>
-          <h5 class="card-title">Ciberseguridad para Pymes</h5>
-          <p class="card-text text-muted">Protege los datos de tu empresa y de tus clientes con buenas prácticas reales.</p>
-        </div>
-      </div>
+{% endfor %}
+
   </div>
   <p class="text-center mt-4"><a href="servicios.html" class="fw-semibold">Ver el detalle de todos los servicios &rarr;</a></p>
 </section>
