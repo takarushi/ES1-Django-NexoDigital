@@ -10,12 +10,12 @@
 
 <section class="container py-5">
     <div class="row g-4">
-        {% for item in servicios %}
+        {% for servicio in servicios %}
         <div class="card tn-card p-3 position-relative">
-          <div class="tn-icon">{{ item.icon }}</div>
-          <h5 class="card-title">{{ item.nombre }}</h5>
-          <p class="card-text text-muted">{{item.descripcion_corta}}</p>
-          <a href="detalle-1.html" class="stretched-link fw-semibold">Ver detalle &rarr;</a>
+          <div class="tn-icon">{{ servicio.icon }}</div>
+          <h5 class="card-title">{{ servicio.nombre }}</h5>
+          <p class="card-text text-muted">{{servicio.descripcion_corta}}</p>
+          <a href="{% url 'servicios-details' servicio.id %}" class="stretched-link fw-semibold">Ver detalle &rarr;</a>
         </div>
         {% endfor %}
     </div>

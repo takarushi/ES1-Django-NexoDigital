@@ -5,26 +5,26 @@
   <div class="container">
     <h1 class="display-5">Soluciones tecnológicas para hacer crecer tu empresa</h1>
     <p class="lead col-lg-8">En NexoDigital Soluciones ayudamos a pequeñas y medianas empresas a digitalizar sus procesos con desarrollo web, aplicaciones móviles, nube y ciberseguridad.</p>
-    <a href="servicios.html" class="btn btn-light btn-lg mt-2 me-2">Ver nuestros servicios</a>
-    <a href="contacto.html" class="btn btn-outline-light btn-lg mt-2">Contáctanos</a>
+    <a href="{% url 'servicios' %}" class="btn btn-light btn-lg mt-2 me-2">Ver nuestros servicios</a>
+    <a href="{% url 'contacto' %}" class="btn btn-outline-light btn-lg mt-2">Contáctanos</a>
   </div>
 </section>
 
 <section class="container py-5">
   <h2 class="mb-4">Lo que hacemos</h2>
   <div class="row g-4">
-        {% for item in servicios %}
+        {% for servicio in servicios %}
       <div class="col-md-6 col-lg-3">
           <div class="card tn-card p-3 position-relative">
-              <div class="tn-icon">{{ item.icon }}</div>
-              <h5 class="card-title">{{item.nombre}}</h5>
-              <p class="card-text text-muted">{{item.descripcion_corta}}</p>
+              <div class="tn-icon">{{ servicio.icon }}</div>
+              <h5 class="card-title">{{servicio.nombre}}</h5>
+              <p class="card-text text-muted">{{servicio.descripcion_corta}}</p>
           </div>
       </div>
 {% endfor %}
 
   </div>
-  <p class="text-center mt-4"><a href="servicios.html" class="fw-semibold">Ver el detalle de todos los servicios &rarr;</a></p>
+  <p class="text-center mt-4"><a href="{% url 'servicios' %}" class="fw-semibold">Ver el detalle de todos los servicios &rarr;</a></p>
 </section>
 
 <section class="container py-5">
